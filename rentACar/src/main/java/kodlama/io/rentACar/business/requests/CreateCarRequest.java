@@ -11,9 +11,20 @@ import javax.validation.constraints.Size;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CreateBrandRequest {
+public class CreateCarRequest {
     @NotNull
     @NotBlank
-    @Size(min = 3 ,max = 20)
-    private String name;
+    private String plate;
+
+    @NotBlank
+    @NotNull
+    private double dailyPrice;
+
+    @NotBlank
+    @NotNull
+    private int modelYear;
+
+    @NotBlank
+    @NotNull
+    private String state;
 }

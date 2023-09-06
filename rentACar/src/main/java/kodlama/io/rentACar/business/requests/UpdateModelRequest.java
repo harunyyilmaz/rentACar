@@ -11,9 +11,13 @@ import javax.validation.constraints.Size;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CreateBrandRequest {
+public class UpdateModelRequest {
+
     @NotNull
     @NotBlank
-    @Size(min = 3 ,max = 20)
+    private int id;
+    @NotNull
+    @NotBlank
+    @Size(min = 3 , max = 20)
     private String name;
 }

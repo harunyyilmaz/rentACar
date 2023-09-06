@@ -6,14 +6,28 @@ import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CreateBrandRequest {
+public class UpdateCarRequest {
     @NotNull
     @NotBlank
-    @Size(min = 3 ,max = 20)
-    private String name;
+    private int id;
+
+    @NotNull
+    @NotBlank
+    private String plate;
+
+    @NotNull
+    @NotBlank
+    private double dailyPrice;
+
+    @NotNull
+    @NotBlank
+    private int modelYear;
+
+    @NotNull
+    @NotBlank
+    private String state;
 }
