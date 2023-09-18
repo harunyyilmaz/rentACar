@@ -42,7 +42,9 @@ public class CarManager implements CarService {
 
     @Override
     public void add(CreateCarRequest createCarRequest) {
+
         this.carBusinessRules.checkIfCarNameExists(createCarRequest.getPlate());
+
         Car car=this.modelMapperService.forRequest().map(createCarRequest,Car.class);
         this.carRepository.save(car);
 
